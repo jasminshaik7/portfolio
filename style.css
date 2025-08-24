@@ -1,0 +1,43 @@
+:root{
+  --bg:#0e0f12; --panel:#14161b; --muted:#8b93a7; --brand:#ff496a; --brand-2:#ffb703; --text:#e9edf3;
+  --card:#161922; --ring:rgba(255,73,106,.35);
+}
+
+body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--text)}
+
+.topbar{position:sticky;top:0;background:#14161b;z-index:10;padding:12px}
+.logo{font-weight:800;display:flex;align-items:center;gap:8px}
+.logo-mark{background:var(--brand);color:#fff;padding:6px;border-radius:6px}
+
+.chipbar{display:flex;gap:8px;flex-wrap:wrap;margin-left:20px}
+.chip{padding:6px 12px;border-radius:20px;background:#222;color:#fff;cursor:pointer;border:none}
+.chip.active{background:var(--brand)}
+
+.actions{margin-left:auto;display:flex;gap:10px}
+.search{background:#222;padding:6px 10px;border-radius:8px}
+.search input{background:none;border:none;outline:none;color:#fff}
+.select{background:#222;color:#fff;padding:6px 10px;border-radius:8px}
+
+.hero{padding:20px}
+.hero h1{margin:0;font-size:2rem}
+.hero p{color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:20px}
+.card{background:var(--card);border-radius:10px;overflow:hidden;transition:0.3s}
+.card:hover{transform:scale(1.03)}
+.thumb{position:relative}
+.thumb video{width:100%;height:160px;object-fit:cover}
+.badge{position:absolute;top:10px;left:10px;background:#000a;color:#fff;padding:4px 8px;border-radius:6px;font-size:12px}
+.dur{position:absolute;bottom:10px;right:10px;background:#000a;color:#fff;padding:4px 8px;border-radius:6px;font-size:12px}
+.meta{padding:10px}
+.title{font-weight:bold}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{background:#222;color:#aaa;padding:2px 6px;border-radius:6px;font-size:12px}
+
+.foot{text-align:center;padding:20px;color:var(--muted)}
+
+.lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox-inner{background:#111;padding:10px;border-radius:8px;max-width:800px;width:100%}
+.player{width:100%;height:auto}
+.close{background:none;border:none;color:#fff;font-size:20px;cursor:pointer}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editkaro.in – Video Portfolio</title>
+  <meta name="description" content="Interactive portfolio for Editkaro.in with category filters, search, lightbox previews, animations, and responsive layout."/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="sr" href="#grid">Skip to content</a>
+  <div class="topbar">
+    <div class="container row">
+      <div class="logo">
+        <div class="logo-mark">🎞</div><span>Editkaro<span style="color:var(--brand-2)">.in</span> Portfolio</span>
+      </div>
+      <nav class="chipbar">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="short">Short‑form</button>
+        <button class="chip" data-filter="long">Long‑form</button>
+        <button class="chip" data-filter="gaming">Gaming</button>
+        <button class="chip" data-filter="ads">Ads</button>
+        <button class="chip" data-filter="anime">Anime</button>
+        <button class="chip" data-filter="ecom">eCommerce</button>
+        <button class="chip" data-filter="color">Color Grading</button>
+        <button class="chip" data-filter="doc">Documentary</button>
+      </nav>
+      <div class="actions">
+        <label class="search">
+          🔎 <input id="search" type="search" placeholder="Search… (title, tag)" />
+        </label>
+        <select id="sort" class="select">
+          <option value="featured">Sort: Featured</option>
+          <option value="shortest">Sort: Shortest</option>
+          <option value="longest">Sort: Longest</option>
+          <option value="az">Sort: A → Z</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero container">
+    <h1>Showreel & Selected Work</h1>
+    <p>Social-first video editing across reels, long‑form, gaming highlights, brand ads, eCommerce, anime AMVs and documentary edits.</p>
+  </header>
+
+  <main id="grid" class="container">
+    <section class="grid"></section>
+    <p class="empty" hidden>No matching projects. Try another category or clear the search.</p>
+  </main>
+
+  <footer class="foot container">© <span id="yr"></span> Editkaro.in • Crafted for VaultofCodes mini‑project</footer>
+
+  <div class="lightbox">
+    <div class="lightbox-inner">
+      <header>
+        <h3 id="lb-title">Preview</h3>
+        <button class="close">✕</button>
+      </header>
+      <video class="player" controls preload="metadata"></video>
+    </div>
+  </div>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="thumb" data-click="open">
+        <span class="badge"></span>
+        <span class="dur"></span>
+        <video muted preload="metadata" playsinline></video>
+      </div>
+      <div class="meta">
+        <h3 class="title"></h3>
+        <div class="tags"></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
